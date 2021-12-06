@@ -43,15 +43,6 @@ closeBtn.addEventListener("click", closeModal);
 
 function closeModal() {
     modalbg.style.display = "none";
-    // Suppression des messages d'erreur
-     hideError(
-        (firstnameErrorTag,
-            lastnameErrorTag,
-            emailErrorTag,
-            birthdateErrorTag,
-             quantityErrorTag,
-           locationErrorTag)
-     );
 };
 
 
@@ -64,12 +55,6 @@ const quantityErrorTag = document.getElementById("quantity-error");
 const locationErrorTag = document.getElementById("location-error");
 const conditionUtilisationErrorTag = document.getElementById("conditions-utilisation-error");
 
-// Validation Email par expression régulière
-function emailRegexValidation(email) {
-    const re =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  }
 
 //validation des noms par expression regulière
 
@@ -77,6 +62,14 @@ function nameRegexValidation(name) {
     const re = /^[a-z ,.'-]+$/i;
     return re.test(name);
 }
+
+// Validation Email par expression régulière
+function emailRegexValidation(email) {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
 
 //fonction permettant de valider le prenom
 function validateFirstName() {
@@ -249,10 +242,12 @@ formBody.insertAdjacentHTML(
 let successMessage = document.getElementById('success');
 successMessage.style.display = "none"; // On le cache par défaut
 
+
+//fonction qui nous permet de fermer automatiquement le formulaire de succes dans un temps qu'on précise
 function resetForm() {
-    formBody.reset();
-    successMessage.style.display = "none";
-    formBody.style.display = "block";
+    formBody.reset(); //restaure les valeurs par défaut des éléments du formulaire
+    successMessage.style.display = "none"; //cacher le bloc de succes
+    formBody.style.display = "block"; //l'apparition de 1er bloc le formulaire initial
     closeModal();
 }
 
