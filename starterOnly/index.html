@@ -59,26 +59,31 @@
                         <div class="formData">
                             <label for="first">Prénom</label><br>
                             <input class="text-control" type="text" id="first" name="first"  /><br>
+                            <!--ajouter une balise span pour recuperer les messages d'erreurs-->
                             <span id='firstname-error' class='error-text'></span>
                         </div>
                         <div class="formData">
                             <label for="last">Nom</label><br>
                             <input class="text-control" type="text" id="last" name="last" /><br>
+                            <!--ajouter une balise span pour recuperer les messages d'erreurs-->
                             <span id='lastname-error' class='error-text'></span>
                         </div>
                         <div class="formData">
                             <label for="email">E-mail</label><br>
                             <input class="text-control" type="text" id="email" name="email" /><br>
+                            <!--ajouter une balise span pour recuperer les messages d'erreurs-->
                             <span id='email-error' class='error-text'></span>
                         </div>
                         <div class="formData">
                             <label for="birthdate">Date de naissance</label><br>
                             <input class="text-control" type="date" id="birthdate" name="birthdate" /><br>
+                            <!--ajouter une balise span pour recuperer les messages d'erreurs-->
                             <span id='birthdate-error' class='error-text'></span>
                         </div>
                         <div class="formData">
                             <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                             <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                            <!--ajouter une balise span pour recuperer les messages d'erreurs-->
                             <span id='quantity-error' class='error-text'></span>
                         </div>
                         <p class="text-label">Quelles villes ?</p>
@@ -86,6 +91,7 @@
                         <div id="localisation" class="formData">
                             <input class="checkbox-input location" type="radio" id="location1" name="location" value="New York" />
                             <label class="checkbox-label" for="location1">
+                        <!--ajouter une balise span pour recuperer les messages d'erreurs-->        
                   <span class="checkbox-icon"></span>
                   New York</label
                 >
@@ -100,6 +106,7 @@
                 <input class="checkbox-input location" type="radio" id="location6" name="location" value="Portland" />
                 <label class="checkbox-label" for="location6"> <span class="checkbox-icon"></span> Portland</label >
                 <br>
+                <!--ajouter une balise span pour recuperer les messages d'erreurs-->
                 <span id='location-error' class='error-text'></span>
               </div>
 
@@ -107,7 +114,9 @@
                 <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
-                </label> <br> <span id='conditions-utilisation-error' class='error-text'></span> <br> <input class="checkbox-input" type="checkbox" id="checkbox2" /> <label class="checkbox2-label" for="checkbox2"> <span class="checkbox-icon"></span> Je souhaite être prévenu des prochains évènements. </label>
+                </label> <br> 
+                <!--ajouter une balise span pour recuperer les messages d'erreurs-->
+                <span id='conditions-utilisation-error' class='error-text'></span> <br> <input class="checkbox-input" type="checkbox" id="checkbox2" /> <label class="checkbox2-label" for="checkbox2"> <span class="checkbox-icon"></span> Je souhaite être prévenu des prochains évènements. </label>
                             <br>
                         </div>
 
